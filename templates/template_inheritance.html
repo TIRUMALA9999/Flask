@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<button onclick="greetUser()">Click Me</button>
+
+<body>
+    <header>
+        <h1>My Flask App</h1>
+        <img src="{{ url_for('static', filename='DSC_0017.jpg') }}" alt="Logo" width="150">
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright 2025</p>
+    </footer>
+</body>
+</html>
